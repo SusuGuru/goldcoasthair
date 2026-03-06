@@ -28,38 +28,7 @@
 <title>LUXE HAIR | Premium Extensions &amp; Wigs</title>
 </head>
 <body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 overflow-x-hidden">
-<!-- Navigation -->
-<header class="sticky top-0 z-50 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-primary/10">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="flex items-center justify-between h-20">
-<div class="flex items-center gap-8">
-<div class="flex items-center gap-2 text-primary">
-<span class="material-symbols-outlined text-3xl">flare</span>
-<h1 class="text-xl font-extrabold tracking-tighter text-slate-900 dark:text-slate-100">LUXE HAIR</h1>
-</div>
-<nav class="hidden md:flex items-center gap-8">
-<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Wigs</a>
-<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Extensions</a>
-<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">New Arrivals</a>
-<a class="text-sm font-semibold text-primary" href="#">Sale</a>
-</nav>
-</div>
-<div class="flex items-center gap-4">
-<div class="hidden sm:flex relative">
-<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xl">search</span>
-<input class="bg-primary/5 border-none rounded-full py-2 pl-10 pr-4 text-sm focus:ring-2 focus:ring-primary w-48 lg:w-64" placeholder="Search collections..." type="text"/>
-</div>
-<button class="p-2 hover:bg-primary/10 rounded-full transition-colors relative">
-<span class="material-symbols-outlined">shopping_bag</span>
-<span class="absolute top-1 right-1 bg-primary text-[10px] font-bold px-1.5 py-0.5 rounded-full text-background-dark">2</span>
-</button>
-<button class="p-2 hover:bg-primary/10 rounded-full transition-colors">
-<span class="material-symbols-outlined">person</span>
-</button>
-</div>
-</div>
-</div>
-</header>
+<div id="navbar"></div>
 <main>
 <!-- Hero Section -->
 <section class="relative h-[85vh] flex items-center overflow-hidden">
@@ -375,4 +344,11 @@
 </div>
 </div>
 </footer>
+<script>
+fetch("../components/navbar.html")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("navbar").innerHTML = data;
+  });
+</script>
 </body></html>

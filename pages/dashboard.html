@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Luxe Hair - Premium Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#eebd2b",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#221d10",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+<div class="flex min-h-screen">
+<!-- Sidebar Navigation -->
+<aside class="w-72 border-r border-slate-200 dark:border-slate-800 flex flex-col bg-white dark:bg-background-dark/50">
+<div class="p-8 flex items-center gap-3">
+<div class="size-8 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 0.757355L47.2426 24L24 47.2426L0.757355 24L24 0.757355ZM21 35.7574V12.2426L9.24264 24L21 35.7574Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-xl font-extrabold tracking-tight">LUXE HAIR</h2>
+</div>
+<div class="px-6 py-4">
+<div class="flex items-center gap-4 mb-8 p-3 rounded-xl bg-slate-50 dark:bg-slate-800/50">
+<div class="size-12 rounded-full bg-cover bg-center border-2 border-primary" data-alt="Premium member profile picture portrait" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBXyBncwkjqydNO3CDDidXG11KaZ1-MY_DkWgkyZu8NVvYcZwkDlHPk8yne4VUlp-CvXhy1spcbcvYGabkRioohH7XjQEN5AcAf9jSHvw2XjgUF_VZ796u635ya7e5gZqeFRbW1txf74iEhfxj0hrzVJReAjZTlasG-M7P9JR-QfMlGAe2W_pBxSmA2GgToAwFbQjmL0iHKKqwVYy373MpAf1NiZ4IOYVGakhtSag0keDzMgS-0kRzwdhq7wULqXlf0lR3LE-qOBgM')"></div>
+<div>
+<p class="font-bold text-sm">Eleanor</p>
+<p class="text-xs text-primary font-medium">Premium Member</p>
+</div>
+</div>
+<nav class="space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg bg-primary text-slate-900 font-semibold transition-all" href="#">
+<span class="material-symbols-outlined text-xl">dashboard</span>
+<span class="text-sm">Overview</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-400 font-medium transition-all" href="#">
+<span class="material-symbols-outlined text-xl">history</span>
+<span class="text-sm">Order History</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-400 font-medium transition-all" href="#">
+<span class="material-symbols-outlined text-xl">favorite</span>
+<span class="text-sm">My Wishlist</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-400 font-medium transition-all" href="#">
+<span class="material-symbols-outlined text-xl">location_on</span>
+<span class="text-sm">Address Book</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-400 font-medium transition-all" href="#">
+<span class="material-symbols-outlined text-xl">settings</span>
+<span class="text-sm">Account Settings</span>
+</a>
+</nav>
+</div>
+<div class="mt-auto p-6 border-t border-slate-200 dark:border-slate-800">
+<button class="flex w-full items-center justify-center gap-2 px-4 py-3 rounded-lg bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-900 font-bold hover:opacity-90 transition-all">
+<span class="material-symbols-outlined text-lg">logout</span>
+<span>Logout</span>
+</button>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 overflow-y-auto">
+<!-- Header -->
+<header class="sticky top-0 z-10 flex items-center justify-between px-10 py-6 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="flex items-center bg-white dark:bg-slate-800 px-4 py-2 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700 w-96">
+<span class="material-symbols-outlined text-slate-400 mr-2">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-full placeholder-slate-400" placeholder="Search orders, products, inspiration..." type="text"/>
+</div>
+<div class="flex items-center gap-6">
+<button class="relative p-2 text-slate-600 dark:text-slate-300 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 size-2 bg-primary rounded-full ring-2 ring-background-light dark:ring-background-dark"></span>
+</button>
+<button class="p-2 text-slate-600 dark:text-slate-300 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+<div class="h-6 w-px bg-slate-200 dark:bg-slate-700"></div>
+<div class="flex items-center gap-3">
+<span class="text-sm font-semibold">Eleanor Thorne</span>
+<div class="size-10 rounded-full bg-cover bg-center" data-alt="User profile avatar" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCPfcQmqxUiay-knrOl3f8SZ8b5_RZLgcPagL7xYLBmZ5kwtEnARtqR7jASldrG4y3iyJbOhwRdIEJgtQQiXb6aUTNDRSrUrQ0fpNxNBy5DcHSeSlXToyf7vbI41yrGICn8lH8cRYuh8_nwU2OhuUz_Qc_C1yudbHOoc29lyTfJHfOgJZ9hGdYlEg5GFXDQRuboolMuov7UdCNmlb9nNO-6U7TIo7W-Dlro6wUh2xEGySEHbi35PTzNGqlTGw3pcb2nxBA5EFXUCCk')"></div>
+</div>
+</div>
+</header>
+<div class="px-10 pb-12">
+<!-- Welcome Section -->
+<section class="mb-10 mt-4">
+<h1 class="text-4xl font-extrabold text-slate-900 dark:text-slate-100 tracking-tight">Hello, Eleanor!</h1>
+<p class="text-slate-500 dark:text-slate-400 mt-2 text-lg">Welcome back to your luxury dashboard. Your style, curated by us.</p>
+</section>
+<!-- Grid Layout -->
+<div class="grid grid-cols-12 gap-8">
+<!-- Recent Orders Table -->
+<div class="col-span-12 lg:col-span-8 space-y-8">
+<div class="bg-white dark:bg-slate-900/50 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 overflow-hidden">
+<div class="p-6 border-b border-slate-100 dark:border-slate-800 flex justify-between items-center">
+<h3 class="font-bold text-lg">Recent Orders</h3>
+<button class="text-primary font-semibold text-sm hover:underline">View All Orders</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead class="bg-slate-50 dark:bg-slate-800/50 text-slate-500 text-xs font-bold uppercase tracking-wider">
+<tr>
+<th class="px-6 py-4">Order ID</th>
+<th class="px-6 py-4">Date</th>
+<th class="px-6 py-4">Product</th>
+<th class="px-6 py-4">Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-5 font-medium text-sm">#LX-9082</td>
+<td class="px-6 py-5 text-slate-500 text-sm">Oct 24, 2023</td>
+<td class="px-6 py-5 text-sm">HD Lace Frontal Wig - Silk</td>
+<td class="px-6 py-5">
+<span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400">Shipped</span>
+</td>
+</tr>
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-5 font-medium text-sm">#LX-8841</td>
+<td class="px-6 py-5 text-slate-500 text-sm">Sept 12, 2023</td>
+<td class="px-6 py-5 text-sm">Seamless Clip-ins - Espresso</td>
+<td class="px-6 py-5">
+<span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-primary/20 text-primary dark:text-primary-light">Processing</span>
+</td>
+</tr>
+<tr class="hover:bg-slate-50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-5 font-medium text-sm">#LX-8720</td>
+<td class="px-6 py-5 text-slate-500 text-sm">Aug 28, 2023</td>
+<td class="px-6 py-5 text-sm">Velvet Hair Wrap Kit</td>
+<td class="px-6 py-5">
+<span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-slate-100 text-slate-500 dark:bg-slate-800 dark:text-slate-400">Delivered</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Recommended for You -->
+<div>
+<div class="flex items-center justify-between mb-6">
+<h3 class="font-bold text-xl">Recommended for You</h3>
+<div class="flex gap-2">
+<button class="size-8 rounded-full border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-sm">chevron_left</span>
+</button>
+<button class="size-8 rounded-full border border-slate-200 dark:border-slate-700 flex items-center justify-center text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-6">
+<div class="group cursor-pointer">
+<div class="relative aspect-[4/5] overflow-hidden rounded-2xl bg-slate-100 dark:bg-slate-800">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Long wavy dark brown hair wig" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3DNNH8iSAaIR2HuNhZNTIesTK4s9hJcPpQeu5qb54Cz4HKaudF61cje2E_FkoqnmI_2571XDlD3ZrdGsYnPn4lNfKqyJq8F5o-rFSThkC5QLug1teE_WT9V5c9ttR9rrOP5m4OcyJUlK4eQFOsStkeYYYpX6khO3E3W-BQmai8qgPqCbqmup0JNsfjBJSW-hMulDGrm2owzBOihOfZ_Zjyax19iMNVRAvLlCXgFU0lN52_Jxhri8LTbyz5wwyWbvYCf9NHTiOajQ"/>
+<div class="absolute top-4 right-4">
+<button class="size-10 bg-white/80 dark:bg-slate-900/80 backdrop-blur rounded-full flex items-center justify-center text-slate-400 hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined text-xl">favorite</span>
+</button>
+</div>
+</div>
+<div class="mt-4">
+<h4 class="font-bold text-sm">Obsidian Silk Frontal</h4>
+<p class="text-xs text-slate-500 mt-1">24 Inches • Natural Black</p>
+<p class="text-primary font-extrabold mt-2">$850.00</p>
+</div>
+</div>
+<div class="group cursor-pointer">
+<div class="relative aspect-[4/5] overflow-hidden rounded-2xl bg-slate-100 dark:bg-slate-800">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Honey blonde curly hair extensions" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHpIB74hl7IttXSwqUkxuOQLckAbeV3aHOgW2KnEcuJtfEwUJ-mbtV0q2jTQHHUpc_ZpEQpsqbWLbwjr3QArQ4Krsq_gHI_Y9CeJK9wc7ZYkNIIr54MQgBXw5Q89KBOXvsaUOASNTEED1KIIKulNyWDfu0BUt8T23pMftYGXWI0PZTL3CByQ9udxUTSsX40rOo37ORy7f3NL72HOAnlDKUb089SOwTCrveXGCZxPhW7nH3FT5tDFg3YDixUjbKZprWOeUmy_YRFcU"/>
+<div class="absolute top-4 right-4">
+<button class="size-10 bg-white/80 dark:bg-slate-900/80 backdrop-blur rounded-full flex items-center justify-center text-slate-400 hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined text-xl">favorite</span>
+</button>
+</div>
+</div>
+<div class="mt-4">
+<h4 class="font-bold text-sm">Honey Glow Clip-Ins</h4>
+<p class="text-xs text-slate-500 mt-1">18 Inches • Honey Blonde</p>
+<p class="text-primary font-extrabold mt-2">$320.00</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Side Panels (Hair Profile) -->
+<div class="col-span-12 lg:col-span-4 space-y-8">
+<div class="bg-primary/10 dark:bg-primary/5 rounded-2xl border border-primary/20 p-8">
+<div class="flex items-center justify-between mb-6">
+<h3 class="font-bold text-xl">My Hair Profile</h3>
+<button class="size-8 rounded-lg bg-primary/20 dark:bg-primary/20 text-primary flex items-center justify-center hover:bg-primary/30 transition-all">
+<span class="material-symbols-outlined text-xl">edit</span>
+</button>
+</div>
+<div class="space-y-6">
+<div>
+<p class="text-xs font-bold uppercase tracking-widest text-primary/80 mb-2">Preferred Type</p>
+<p class="text-lg font-semibold">HD Lace Wigs</p>
+</div>
+<div class="h-px bg-primary/20"></div>
+<div>
+<p class="text-xs font-bold uppercase tracking-widest text-primary/80 mb-2">Ideal Length</p>
+<p class="text-lg font-semibold">22 - 26 Inches</p>
+</div>
+<div class="h-px bg-primary/20"></div>
+<div>
+<p class="text-xs font-bold uppercase tracking-widest text-primary/80 mb-2">Color Palette</p>
+<div class="flex gap-2 mt-2">
+<div class="size-6 rounded-full bg-[#1b1b1b] border border-white/20" title="Natural Black"></div>
+<div class="size-6 rounded-full bg-[#3d2b1f] border border-white/20" title="Dark Brown"></div>
+<div class="size-6 rounded-full bg-[#c2a278] border border-white/20" title="Caramel"></div>
+</div>
+</div>
+</div>
+<button class="w-full mt-8 bg-primary text-slate-900 font-bold py-3 rounded-xl shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-[0.98] transition-all">
+                                Update Preferences
+                            </button>
+</div>
+<!-- Loyalty Card -->
+<div class="bg-slate-900 dark:bg-slate-800 rounded-2xl p-8 text-white relative overflow-hidden group">
+<div class="absolute -top-10 -right-10 size-40 bg-primary/20 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700"></div>
+<div class="relative z-10">
+<div class="flex justify-between items-start">
+<p class="text-xs font-bold text-primary tracking-widest uppercase">Loyalty Status</p>
+<span class="material-symbols-outlined text-primary">diamond</span>
+</div>
+<p class="text-2xl font-extrabold mt-4">Gold Member</p>
+<div class="mt-8">
+<div class="flex justify-between text-xs mb-2">
+<span class="text-slate-400">Next Reward: Platinum</span>
+<span class="text-primary">85%</span>
+</div>
+<div class="w-full h-1.5 bg-white/10 rounded-full">
+<div class="h-full bg-primary rounded-full" style="width: 85%"></div>
+</div>
+</div>
+<p class="text-xs text-slate-400 mt-6 leading-relaxed">You are 150 points away from unlocking <span class="text-white font-bold">Free Overnight Shipping</span> for life.</p>
+</div>
+</div>
+<!-- Mini Map / Showroom -->
+<div class="bg-white dark:bg-slate-900/50 rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden">
+<div class="relative h-32 bg-slate-200" data-alt="Stylized map showing luxury boutique location" data-location="Beverly Hills" style="">
+<div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+<div class="absolute bottom-4 left-4 flex items-center gap-2 text-white">
+<span class="material-symbols-outlined text-sm">pin_drop</span>
+<p class="text-xs font-bold">Visit our LA Showroom</p>
+</div>
+</div>
+<div class="p-6">
+<p class="text-sm font-semibold mb-1">90210 Wilshire Blvd</p>
+<p class="text-xs text-slate-500 mb-4">Book a private fitting session today.</p>
+<button class="w-full border border-slate-200 dark:border-slate-700 py-2.5 rounded-lg text-xs font-bold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                                    Book Appointment
+                                </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>
