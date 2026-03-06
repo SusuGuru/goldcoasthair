@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#eebd2b",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#221d10",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>Luxe Hair | My Wishlist</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Top Navigation Bar -->
+<header class="flex items-center justify-between border-b border-primary/10 bg-background-light dark:bg-background-dark px-6 py-4 lg:px-20">
+<div class="flex items-center gap-4 text-slate-900 dark:text-slate-100">
+<div class="text-primary size-8">
+<span class="material-symbols-outlined text-4xl">diamond</span>
+</div>
+<h2 class="text-xl font-bold leading-tight tracking-[-0.015em]">Luxe Hair</h2>
+</div>
+<div class="flex flex-1 justify-end gap-6 items-center">
+<label class="hidden md:flex flex-col min-w-40 h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full bg-slate-200/50 dark:bg-slate-800/50 border border-transparent focus-within:border-primary">
+<div class="text-slate-500 flex items-center justify-center pl-4">
+<span class="material-symbols-outlined text-xl">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 border-none bg-transparent focus:ring-0 text-sm placeholder:text-slate-500" placeholder="Search extensions..." value=""/>
+</div>
+</label>
+<div class="flex gap-3">
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-slate-200/50 dark:bg-slate-800/50 text-slate-900 dark:text-slate-100 hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-xl">shopping_bag</span>
+</button>
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-slate-200/50 dark:bg-slate-800/50 text-slate-900 dark:text-slate-100 hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-xl">notifications</span>
+</button>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary" data-alt="User profile picture elegant woman" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBPlqRLbQUeyB5ucRlLNCDDGIxVL1madbAGzMUrZksk_ttG-g4CL_My1pwJbsLbWeTL6qTywP9lNKnHoW0OODUJN3EqZ4lfcIwbUX32YvPyPdJv_yELoYdjrvuRU8XSLJYo95wNXnhRVc_-5difU0919efcZ56OXimzadqEfGcsilynTAIrckMEHq4W-hhz5bGOc8xF1p96CYF1tjZPv2xBHHGj-SQxt6xbqCluY06ma1qmBcsIUCsaBpiZgtrXXYPEWJ4EI0li9Qg");'></div>
+</div>
+</header>
+<div class="flex flex-1 overflow-hidden">
+<!-- Sidebar Navigation -->
+<aside class="hidden lg:flex w-72 flex-col border-r border-primary/10 bg-background-light dark:bg-background-dark p-6 gap-8">
+<div class="flex flex-col gap-6">
+<div class="flex flex-col gap-2">
+<p class="px-3 text-xs font-semibold uppercase tracking-wider text-slate-400">Main Menu</p>
+<nav class="flex flex-col gap-1">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-primary/10 hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined text-xl">grid_view</span>
+<span class="text-sm font-medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-primary/10 hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined text-xl">inventory_2</span>
+<span class="text-sm font-medium">My Orders</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary text-slate-900 font-bold shadow-md shadow-primary/20" href="#">
+<span class="material-symbols-outlined text-xl">favorite</span>
+<span class="text-sm">Wishlist</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-primary/10 hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined text-xl">face_4</span>
+<span class="text-sm font-medium">Beauty Profile</span>
+</a>
+</nav>
+</div>
+<div class="flex flex-col gap-2 pt-6 border-t border-primary/10">
+<p class="px-3 text-xs font-semibold uppercase tracking-wider text-slate-400">Settings &amp; Support</p>
+<nav class="flex flex-col gap-1">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-primary/10 hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined text-xl">settings</span>
+<span class="text-sm font-medium">Settings</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-primary/10 hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined text-xl">help</span>
+<span class="text-sm font-medium">Support</span>
+</a>
+</nav>
+</div>
+</div>
+<div class="mt-auto">
+<button class="flex w-full items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-slate-200/50 dark:bg-slate-800/50 text-slate-900 dark:text-slate-100 font-bold hover:bg-red-500/10 hover:text-red-500 transition-all">
+<span class="material-symbols-outlined text-xl">logout</span>
+<span>Logout</span>
+</button>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 overflow-y-auto p-6 lg:p-10">
+<div class="max-w-6xl mx-auto space-y-10">
+<!-- Wishlist Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div class="space-y-2">
+<h1 class="text-4xl font-black tracking-tight dark:text-white">My Wishlist</h1>
+<p class="text-slate-500 dark:text-slate-400 max-w-lg">
+                                Manage your curated selection of luxury hair extensions, premium wigs, and professional styling tools.
+                            </p>
+</div>
+<div class="flex gap-3">
+<button class="flex items-center gap-2 px-6 py-3 rounded-xl bg-primary text-slate-900 font-bold hover:opacity-90 transition-opacity shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+<span>Move All to Cart</span>
+</button>
+</div>
+</div>
+<!-- Quick Actions -->
+<div class="flex flex-wrap gap-4 py-6 border-y border-primary/10">
+<button class="flex flex-col items-center justify-center gap-2 w-28 p-4 rounded-xl hover:bg-primary/5 transition-colors group">
+<div class="p-3 rounded-full bg-slate-200/50 dark:bg-slate-800/50 group-hover:bg-primary group-hover:text-slate-900 transition-all">
+<span class="material-symbols-outlined">share</span>
+</div>
+<span class="text-xs font-bold">Share</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-2 w-28 p-4 rounded-xl hover:bg-primary/5 transition-colors group">
+<div class="p-3 rounded-full bg-slate-200/50 dark:bg-slate-800/50 group-hover:bg-primary group-hover:text-slate-900 transition-all">
+<span class="material-symbols-outlined">link</span>
+</div>
+<span class="text-xs font-bold">Copy Link</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-2 w-28 p-4 rounded-xl hover:bg-primary/5 transition-colors group">
+<div class="p-3 rounded-full bg-slate-200/50 dark:bg-slate-800/50 group-hover:bg-primary group-hover:text-slate-900 transition-all">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<span class="text-xs font-bold">Email List</span>
+</button>
+</div>
+<!-- Product Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8">
+<!-- Product Item 1 -->
+<div class="group flex flex-col bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 transition-all hover:shadow-2xl hover:shadow-primary/5">
+<div class="relative aspect-[3/4] w-full overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Luxury long straight black hair wig" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCoXvxn_0RJkvxfZGouYdzqykc-dJILvL4i1j5C0rAya1EC2cXI36hEkXt9GJ6ztVXldZt97fbL08elGHaUf4HXhqgqxprJaHQBEgAVuxfRiJYQ-SW0kuQJkCaI8Qmk186H4Pun5IgN-EGeTnKQtf3MhokoDGDSOhgLTW-pExhGWGYXBzYiGvZN33qZaMR8eMNy4vjYc4b1lE3AdE4go2zQ8iAukgMxxgcyGx5nYklU8mPjK8xxqnYqT7O2zin-wTnl5Oh7fFSNF_E");'></div>
+<div class="absolute top-4 left-4 bg-primary text-slate-900 text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full">New Arrival</div>
+<button class="absolute top-4 right-4 p-2 bg-white/80 dark:bg-black/40 backdrop-blur-sm rounded-full text-red-500 hover:bg-red-500 hover:text-white transition-all">
+<span class="material-symbols-outlined text-xl">delete</span>
+</button>
+</div>
+<div class="p-6 flex flex-col gap-4">
+<div>
+<div class="flex justify-between items-start">
+<h3 class="text-lg font-bold">Silk Press Straight Wig</h3>
+<span class="text-sm font-black text-primary">$450.00</span>
+</div>
+<div class="flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-green-500 text-sm">check_circle</span>
+<span class="text-xs text-slate-500 font-medium uppercase tracking-tighter">In Stock</span>
+</div>
+</div>
+<button class="w-full flex items-center justify-center gap-2 py-3 rounded-lg border-2 border-primary text-primary font-bold hover:bg-primary hover:text-slate-900 transition-all">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span>Add to Cart</span>
+</button>
+</div>
+</div>
+<!-- Product Item 2 -->
+<div class="group flex flex-col bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 transition-all hover:shadow-2xl hover:shadow-primary/5">
+<div class="relative aspect-[3/4] w-full overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Russian blonde hair bundles quality" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCx2gS3WOaJQuN09bGWRpr5jrSxDUMSzuFzPxTwsms3MgnqSS9KFZiPiALcaN3R8wKeR5yBl7ycbHVckGa8LWfenBlpRnas_hI0nb0tqDIM5VKyUfktZsjazJhXjxcuuUUjNnD2bXgE2qobRXczssycBNoL3vQ3Epjh53DQGfLOIBH8NEGAiLv09DUJ3doBLkvpbaQaA-aLFBOG8GndLkjsdSG1X8LZMDK7CycD2FYWoS1o0ONQ6dMy8vnALzkxshqtYFQM29nhsxY");'></div>
+<div class="absolute top-4 left-4 bg-orange-500 text-white text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full">Limited Stock</div>
+<button class="absolute top-4 right-4 p-2 bg-white/80 dark:bg-black/40 backdrop-blur-sm rounded-full text-red-500 hover:bg-red-500 hover:text-white transition-all">
+<span class="material-symbols-outlined text-xl">delete</span>
+</button>
+</div>
+<div class="p-6 flex flex-col gap-4">
+<div>
+<div class="flex justify-between items-start">
+<h3 class="text-lg font-bold">Russian Blonde Bundle</h3>
+<span class="text-sm font-black text-primary">$180.00</span>
+</div>
+<div class="flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-orange-500 text-sm">info</span>
+<span class="text-xs text-slate-500 font-medium uppercase tracking-tighter">Only 2 left</span>
+</div>
+</div>
+<button class="w-full flex items-center justify-center gap-2 py-3 rounded-lg border-2 border-primary text-primary font-bold hover:bg-primary hover:text-slate-900 transition-all">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span>Add to Cart</span>
+</button>
+</div>
+</div>
+<!-- Product Item 3 -->
+<div class="group flex flex-col bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 transition-all hover:shadow-2xl hover:shadow-primary/5">
+<div class="relative aspect-[3/4] w-full overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Deep wave lace frontal extension" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAGC-o11M5UeN0GV2xmOzCBE3GJldt-l-pzx4q4qqsuplYSM5WYnDcGRtu4jVpHsz55j94ImEpcvudPrJGtBE6Y3X9ClzZwBPgZmACkiMFkGs0BUth4kYlaPzgzzqEDMhXBCWZPq-nyccfYBk3DgHicuRE4VEdkfSCeXQDUWs3sWs22ZmUyuKBc8PhWGOKd5-0AMjFoz9m9g8C-bxDYxRBN3-zFMK-7HKVfestVgX5S-XscV2VxzLx3tAvbu9cK2LmD9PW9GqEliYY");'></div>
+<button class="absolute top-4 right-4 p-2 bg-white/80 dark:bg-black/40 backdrop-blur-sm rounded-full text-red-500 hover:bg-red-500 hover:text-white transition-all">
+<span class="material-symbols-outlined text-xl">delete</span>
+</button>
+</div>
+<div class="p-6 flex flex-col gap-4">
+<div>
+<div class="flex justify-between items-start">
+<h3 class="text-lg font-bold">Deep Wave Frontal</h3>
+<span class="text-sm font-black text-primary">$220.00</span>
+</div>
+<div class="flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-green-500 text-sm">check_circle</span>
+<span class="text-xs text-slate-500 font-medium uppercase tracking-tighter">In Stock</span>
+</div>
+</div>
+<button class="w-full flex items-center justify-center gap-2 py-3 rounded-lg border-2 border-primary text-primary font-bold hover:bg-primary hover:text-slate-900 transition-all">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span>Add to Cart</span>
+</button>
+</div>
+</div>
+<!-- Product Item 4 -->
+<div class="group flex flex-col bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 transition-all hover:shadow-2xl hover:shadow-primary/5">
+<div class="relative aspect-[3/4] w-full overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Yaki straight hair extensions display" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC5radh1a0jXb3TWcc7YpJocL0t-qb55cpNtTQw-knBq8hYGR3GJ6xQ74RS7VDsCMokU87lOvZQxeswBbd8WUUC3EA5wNN_TqT1fYu5daOUw89RxfJbpIAuKaNpekOT8D_OS2GMn6rrrR29l4kSCykQehNh78Qxfd_DTb0rL8RuDqUtQ-6eHi6WKNAjgkDEh_ndSIIAzOStE4LIrLKdEE20VdPUtMRChkk13WiDbyvx-Z9v351sWDOftn3SOrkUg2wtI2Ime7VXRo4");'></div>
+<button class="absolute top-4 right-4 p-2 bg-white/80 dark:bg-black/40 backdrop-blur-sm rounded-full text-red-500 hover:bg-red-500 hover:text-white transition-all">
+<span class="material-symbols-outlined text-xl">delete</span>
+</button>
+</div>
+<div class="p-6 flex flex-col gap-4">
+<div>
+<div class="flex justify-between items-start">
+<h3 class="text-lg font-bold">Yaki Straight Extensions</h3>
+<span class="text-sm font-black text-primary">$150.00</span>
+</div>
+<div class="flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-green-500 text-sm">check_circle</span>
+<span class="text-xs text-slate-500 font-medium uppercase tracking-tighter">In Stock</span>
+</div>
+</div>
+<button class="w-full flex items-center justify-center gap-2 py-3 rounded-lg border-2 border-primary text-primary font-bold hover:bg-primary hover:text-slate-900 transition-all">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span>Add to Cart</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>

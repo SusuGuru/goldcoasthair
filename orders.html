@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Order History - Luxe Hair</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#eebd2b",
+              "background-light": "#f8f7f6",
+              "background-dark": "#221d10",
+            },
+            fontFamily: {
+              "display": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Manrope', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="flex flex-col min-h-screen">
+<!-- Top Navigation Bar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark px-6 md:px-10 py-4 sticky top-0 z-50">
+<div class="flex items-center gap-4 text-slate-900 dark:text-slate-100">
+<div class="size-8 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_330)">
+<path clip-rule="evenodd" d="M24 0.757355L47.2426 24L24 47.2426L0.757355 24L24 0.757355ZM21 35.7574V12.2426L9.24264 24L21 35.7574Z" fill="currentColor" fill-rule="evenodd"></path>
+</g>
+<defs>
+<clippath id="clip0_6_330"><rect fill="white" height="48" width="48"></rect></clippath>
+</defs>
+</svg>
+</div>
+<h2 class="text-xl font-extrabold leading-tight tracking-tight">Luxe Hair</h2>
+</div>
+<div class="flex flex-1 justify-end gap-4">
+<div class="flex gap-2">
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-xl">notifications</span>
+</button>
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-xl">account_circle</span>
+</button>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary" data-alt="User profile avatar portrait" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAsNvOZ_1OPJN2mnETpRwTi5vej91DKm0kXvUbDbCjYCItxDfxoY_SApvX7Iv6Zq2d-KxF4IzI2iMDQwxZ_7yAaT6or734Vr8u-5eZiIQO34yyfi4HAD6-Y0T8MefyyDjfaehRDQFuSMMh8ASLYtWTIoKiDXoY6C6NM1axk-lWi2fJgtZUnEmlJ5bdqhAib2Qm9RWgk7tCO2NG9Lj9l_NWnWrHxc4LVSttrB_zgiv5VDA5vpUgaereDnhaKdmG4QT2iRS3K9f6VafA");'></div>
+</div>
+</header>
+<div class="flex flex-1 max-w-[1440px] mx-auto w-full">
+<!-- Sidebar Navigation -->
+<aside class="hidden lg:flex w-72 flex-col gap-6 border-r border-slate-200 dark:border-slate-800 p-6 bg-white dark:bg-background-dark/50">
+<div class="flex flex-col gap-1">
+<h3 class="px-3 text-xs font-bold uppercase tracking-widest text-slate-400 dark:text-slate-500 mb-2">My Account</h3>
+<a class="flex items-center gap-3 px-3 py-3 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-sm font-semibold">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-3 rounded-lg bg-primary/10 text-primary border-l-4 border-primary transition-colors" href="#">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="text-sm font-bold">Order History</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-3 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined">favorite</span>
+<span class="text-sm font-semibold">Wishlist</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-3 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined">location_on</span>
+<span class="text-sm font-semibold">Address Book</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-3 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-sm font-semibold">Settings</span>
+</a>
+</div>
+<div class="mt-auto p-4 bg-primary/5 rounded-xl border border-primary/20">
+<p class="text-xs font-bold text-primary uppercase mb-1">Elite Member</p>
+<p class="text-sm text-slate-600 dark:text-slate-400">You have earned <span class="font-bold text-slate-900 dark:text-white">1,240 points</span></p>
+<button class="mt-3 w-full py-2 bg-primary text-background-dark text-xs font-bold rounded-lg uppercase tracking-wider">Redeem Now</button>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 p-6 md:p-10 flex flex-col gap-8">
+<!-- Header Section -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div class="flex flex-col gap-2">
+<h1 class="text-4xl font-extrabold text-slate-900 dark:text-slate-100 tracking-tight">Order History</h1>
+<p class="text-slate-500 dark:text-slate-400 text-lg">Manage your premium hair purchases and track deliveries.</p>
+</div>
+</div>
+<!-- Search and Filter Section -->
+<div class="flex flex-col md:flex-row gap-4">
+<div class="flex-1 relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+<input class="w-full pl-12 pr-4 py-3 rounded-xl border-slate-200 dark:border-slate-700 bg-white dark:bg-background-dark focus:border-primary focus:ring-1 focus:ring-primary outline-none text-sm shadow-sm transition-all" placeholder="Search by Order ID or product name..." type="text"/>
+</div>
+<div class="flex gap-2">
+<div class="relative min-w-[160px]">
+<select class="w-full appearance-none px-4 py-3 rounded-xl border-slate-200 dark:border-slate-700 bg-white dark:bg-background-dark focus:border-primary focus:ring-1 focus:ring-primary outline-none text-sm shadow-sm pr-10">
+<option>Last 3 months</option>
+<option>2023</option>
+<option>2022</option>
+<option>Older</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400">expand_more</span>
+</div>
+<button class="flex items-center gap-2 px-6 py-3 bg-white dark:bg-background-dark border border-slate-200 dark:border-slate-700 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 transition-all font-semibold text-sm shadow-sm">
+<span class="material-symbols-outlined text-lg">filter_list</span>
+                        Filter
+                    </button>
+</div>
+</div>
+<!-- Orders Table/List -->
+<div class="bg-white dark:bg-background-dark border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm">
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead class="bg-slate-50 dark:bg-slate-800/50 border-b border-slate-200 dark:border-slate-800">
+<tr>
+<th class="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Order ID</th>
+<th class="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Date</th>
+<th class="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Total Price</th>
+<th class="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Status</th>
+<th class="px-6 py-4 text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+<!-- Row 1 -->
+<tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-6 font-bold text-slate-900 dark:text-white">#LX-92834</td>
+<td class="px-6 py-6 text-sm text-slate-600 dark:text-slate-400">October 24, 2023</td>
+<td class="px-6 py-6 font-bold text-slate-900 dark:text-white">$1,250.00</td>
+<td class="px-6 py-6">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400">
+<span class="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+                                        Delivered
+                                    </span>
+</td>
+<td class="px-6 py-6 text-right">
+<div class="flex justify-end gap-3">
+<button class="text-sm font-bold text-primary hover:underline">View Details</button>
+<button class="px-4 py-2 bg-primary text-background-dark text-xs font-bold rounded-lg uppercase transition-transform active:scale-95">Reorder</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-6 font-bold text-slate-900 dark:text-white">#LX-88129</td>
+<td class="px-6 py-6 text-sm text-slate-600 dark:text-slate-400">September 12, 2023</td>
+<td class="px-6 py-6 font-bold text-slate-900 dark:text-white">$450.00</td>
+<td class="px-6 py-6">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400">
+<span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+                                        Shipped
+                                    </span>
+</td>
+<td class="px-6 py-6 text-right">
+<div class="flex justify-end gap-3">
+<button class="text-sm font-bold text-primary hover:underline">Track Package</button>
+<button class="px-4 py-2 border-2 border-primary text-primary text-xs font-bold rounded-lg uppercase hover:bg-primary hover:text-background-dark transition-all">Details</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-6 font-bold text-slate-900 dark:text-white">#LX-87220</td>
+<td class="px-6 py-6 text-sm text-slate-600 dark:text-slate-400">August 05, 2023</td>
+<td class="px-6 py-6 font-bold text-slate-900 dark:text-white">$890.00</td>
+<td class="px-6 py-6">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400">
+<span class="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+                                        Delivered
+                                    </span>
+</td>
+<td class="px-6 py-6 text-right">
+<div class="flex justify-end gap-3">
+<button class="text-sm font-bold text-primary hover:underline">View Details</button>
+<button class="px-4 py-2 bg-primary text-background-dark text-xs font-bold rounded-lg uppercase transition-transform active:scale-95">Reorder</button>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="px-6 py-6 font-bold text-slate-900 dark:text-white">#LX-86551</td>
+<td class="px-6 py-6 text-sm text-slate-600 dark:text-slate-400">July 22, 2023</td>
+<td class="px-6 py-6 font-bold text-slate-900 dark:text-white">$2,100.00</td>
+<td class="px-6 py-6">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                                        Processing
+                                    </span>
+</td>
+<td class="px-6 py-6 text-right">
+<div class="flex justify-end gap-3">
+<button class="text-sm font-bold text-primary hover:underline">View Details</button>
+<button class="px-4 py-2 border-2 border-primary text-primary text-xs font-bold rounded-lg uppercase hover:bg-primary hover:text-background-dark transition-all">Invoice</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Pagination -->
+<div class="flex items-center justify-between py-2">
+<p class="text-sm text-slate-500 dark:text-slate-400">Showing <span class="font-bold text-slate-900 dark:text-white">1</span> to <span class="font-bold text-slate-900 dark:text-white">4</span> of <span class="font-bold text-slate-900 dark:text-white">24</span> results</p>
+<div class="flex gap-1">
+<button class="p-2 rounded-lg border border-slate-200 dark:border-slate-800 text-slate-400 disabled:opacity-50" disabled="">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="px-4 py-2 rounded-lg bg-primary text-background-dark font-bold text-sm">1</button>
+<button class="px-4 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 font-bold text-sm">2</button>
+<button class="px-4 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 font-bold text-sm">3</button>
+<button class="p-2 rounded-lg border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Promotion Banner -->
+<div class="mt-8 rounded-3xl overflow-hidden bg-background-dark relative p-8 md:p-12 text-white border border-primary/20">
+<div class="absolute inset-0 opacity-20 pointer-events-none" style="background-image: linear-gradient(45deg, #eebd2b 25%, transparent 25%), linear-gradient(-45deg, #eebd2b 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #eebd2b 75%), linear-gradient(-45deg, transparent 75%, #eebd2b 75%); background-size: 20px 20px;"></div>
+<div class="relative z-10 max-w-lg">
+<h2 class="text-3xl font-extrabold mb-4">Refer a Friend, Get 20% Off</h2>
+<p class="text-slate-300 mb-6 leading-relaxed">Share the luxury of Luxe Hair with your friends. When they make their first purchase, you'll both receive a 20% discount on your next premium extension set.</p>
+<button class="bg-primary text-background-dark px-8 py-3 rounded-xl font-bold uppercase tracking-wider hover:brightness-110 transition-all shadow-lg shadow-primary/20">Refer Now</button>
+</div>
+<div class="absolute right-0 bottom-0 top-0 hidden md:block w-1/3 opacity-40 md:opacity-100" data-alt="Model with long flowing hair" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD_yjSD1uRv9x5q8_fZ9WajIonGYNUYN3Tjt1Y5OkCrpmHv7vkt4Cku6k1OxUE9pEFKy5O6wd0e49a4hGMJ7KoULdscdraiXPgVxNhmKUJzl4VZUFSc1S-tSnhTy3GzY4iXI5I9mJuT1opzGyY6c1Zi0cjTSjGeMr3_XBlizhhXaK9oMj0GKrWkz7Hg-YZQAn_BHpotU8udCa5GmSLgWGI0bpnpS-Yf69cgXJNaE0Ao5bsOFhMjNJ1_ming8NeBo2dXqQXZ4kLQxCw"); background-size: cover; background-position: center;'></div>
+</div>
+</main>
+</div>
+<!-- Mobile Navigation (Overlay) -->
+<div class="lg:hidden fixed bottom-0 left-0 right-0 bg-white dark:bg-background-dark border-t border-slate-200 dark:border-slate-800 flex justify-around p-3 z-50 shadow-2xl">
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-[10px] font-bold">DASHBOARD</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="text-[10px] font-bold">ORDERS</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">favorite</span>
+<span class="text-[10px] font-bold">WISHLIST</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-[10px] font-bold">SETTINGS</span>
+</button>
+</div>
+</div>
+</body></html>

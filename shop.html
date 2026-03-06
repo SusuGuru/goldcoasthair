@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#eebd2b",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#221d10",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>Luxe Hair | Shop All Collections</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 transition-colors duration-300">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 w-full border-b border-primary/10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-20">
+<div class="flex items-center gap-12">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl">flare</span>
+<h1 class="text-xl font-extrabold tracking-tighter text-slate-900 dark:text-slate-100">LUXE HAIR</h1>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-semibold hover:text-primary transition-colors uppercase tracking-widest border-b-2 border-primary" href="#">Collections</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors uppercase tracking-widest" href="#">Wigs</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors uppercase tracking-widest" href="#">Extensions</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors uppercase tracking-widest" href="#">About</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden lg:flex items-center bg-primary/5 dark:bg-primary/10 rounded-full px-4 py-2 border border-primary/20">
+<span class="material-symbols-outlined text-primary text-xl">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-48 placeholder:text-slate-400 dark:placeholder:text-slate-500" placeholder="Search styles..." type="text"/>
+</div>
+<button class="relative p-2 hover:bg-primary/10 rounded-full transition-colors">
+<span class="material-symbols-outlined text-2xl">shopping_bag</span>
+<span class="absolute top-1 right-1 bg-primary text-[10px] font-bold text-background-dark px-1.5 rounded-full">3</span>
+</button>
+<div class="w-10 h-10 rounded-full border-2 border-primary overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="User profile avatar smiling woman" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDpycJujERTfpwqfLdT4WWmMfvzeLG8PJEqv3o0BVGDDfBC1wdBCSmaRi3eV8vP5eD9841ni3gnpTKEZB7DxF-UUI1Uzp3pLUWbIW-NUA1d2KnLGEeTrz-qSbSOPElRbOJUrEFKUs7PhnpUkfaXQ0OhsC6cc2soEVwZPeadYl5-ozxKAKlmK4n2wDjWzdDgNZc9957nKo9BB2YAbN0nJ_ewRZzXLfKlx5pZvRQf0wyaA6KWxarOAhZCof_fyKYyNgUM_1zDPWVKSg"/>
+</div>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<!-- Page Header -->
+<div class="mb-12">
+<h2 class="text-4xl md:text-5xl font-black text-slate-900 dark:text-slate-100 mb-4 tracking-tight">Shop All Collections</h2>
+<p class="text-slate-600 dark:text-slate-400 max-w-2xl text-lg">Experience the pinnacle of luxury hair craftsmanship. Our curated selections represent the finest in human hair and premium synthetic fibers.</p>
+</div>
+<!-- Filter & Sort Bar -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mb-10 border-y border-primary/10 py-6">
+<div class="flex flex-wrap gap-4">
+<div class="relative group">
+<button class="flex items-center gap-2 px-5 py-2.5 rounded-lg bg-white dark:bg-slate-800 border border-primary/20 hover:border-primary transition-all shadow-sm">
+<span class="text-sm font-medium">Category</span>
+<span class="material-symbols-outlined text-primary">keyboard_arrow_down</span>
+</button>
+</div>
+<div class="relative group">
+<button class="flex items-center gap-2 px-5 py-2.5 rounded-lg bg-white dark:bg-slate-800 border border-primary/20 hover:border-primary transition-all shadow-sm">
+<span class="text-sm font-medium">Length</span>
+<span class="material-symbols-outlined text-primary">keyboard_arrow_down</span>
+</button>
+</div>
+<div class="relative group">
+<button class="flex items-center gap-2 px-5 py-2.5 rounded-lg bg-white dark:bg-slate-800 border border-primary/20 hover:border-primary transition-all shadow-sm">
+<span class="text-sm font-medium">Color</span>
+<span class="material-symbols-outlined text-primary">keyboard_arrow_down</span>
+</button>
+</div>
+<div class="relative group">
+<button class="flex items-center gap-2 px-5 py-2.5 rounded-lg bg-white dark:bg-slate-800 border border-primary/20 hover:border-primary transition-all shadow-sm">
+<span class="text-sm font-medium">Price</span>
+<span class="material-symbols-outlined text-primary">keyboard_arrow_down</span>
+</button>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="text-sm text-slate-500 font-medium">Sort By:</span>
+<select class="form-select bg-white dark:bg-slate-800 border-primary/20 rounded-lg text-sm font-semibold focus:ring-primary focus:border-primary min-w-[180px]">
+<option>Best Selling</option>
+<option>Newest Arrivals</option>
+<option>Price: Low to High</option>
+<option>Price: High to Low</option>
+<option>Customer Rating</option>
+</select>
+</div>
+</div>
+<!-- Category Tabs -->
+<div class="flex gap-8 mb-10 overflow-x-auto pb-2 scrollbar-hide">
+<button class="whitespace-nowrap pb-3 border-b-2 border-primary text-primary font-bold text-sm tracking-widest uppercase">All Products</button>
+<button class="whitespace-nowrap pb-3 border-b-2 border-transparent text-slate-500 hover:text-primary transition-colors font-bold text-sm tracking-widest uppercase">Human Hair Wigs</button>
+<button class="whitespace-nowrap pb-3 border-b-2 border-transparent text-slate-500 hover:text-primary transition-colors font-bold text-sm tracking-widest uppercase">Synthetic Wigs</button>
+<button class="whitespace-nowrap pb-3 border-b-2 border-transparent text-slate-500 hover:text-primary transition-colors font-bold text-sm tracking-widest uppercase">Extensions</button>
+</div>
+<!-- Product Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+<!-- Product Card 1 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-[3/4] mb-4 overflow-hidden rounded-xl bg-slate-100 dark:bg-slate-800">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Luxury long blonde human hair wig" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnRd5PVeIjtPK44wTPdFHLu-NcrP0qbapcQ-JxL3AQB5cmaFi7Zbp6SWqOe8zbxWGj8sZltcHXhfupcKQoJC-oSnIU4lzFf9bfLXW3wn-wYC6-pDS2IjpdFLGF9hbZCkANCUWIQjipjYvnAz5GgwxsgIQflXIagghMyqitL9Z_k_3h3mPXa2aeHG13XJM4caZDxoZu9LQdkyZL4O1Yq5VnXv6-ULUiAke1fC0CeqKBmwZHV7HM-btk0MuMhP9c19y5NZoCPLwo5Dk"/>
+<button class="absolute bottom-4 right-4 bg-white/90 dark:bg-slate-900/90 p-3 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary">add_shopping_cart</span>
+</button>
+<span class="absolute top-4 left-4 bg-primary text-background-dark text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-tighter">New Arrival</span>
+</div>
+<div class="space-y-1">
+<h3 class="text-base font-bold text-slate-900 dark:text-slate-100 uppercase tracking-tight">Silk-Base HD Lace Wig</h3>
+<div class="flex items-center gap-1 mb-1">
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+</div>
+<span class="text-[10px] text-slate-400 font-bold">(124)</span>
+</div>
+<p class="text-primary font-black text-lg">$1,250.00</p>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-[3/4] mb-4 overflow-hidden rounded-xl bg-slate-100 dark:bg-slate-800">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Deep wave dark brown extensions" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaUr1fP54iqN1cMQ6OGSuw5UkAGODRPEdWL_QhQt8632Y0nAb84P0NoR2v4_AASD8v-jUNplsL3qGYa9_eUxTt9U6DNfN-Wxt3m9aU5DzBN-cgyr3BZEQRtQqqO9Nm7WcTjvmiuTVtPpn394tWF3k9o3Phqyu9VaTiO-5NUQ23YK9f0TwrxXyB5yMFTOpjq_6Dv3yGAAuWC7ngTMu0TPuglylteeicFtviatN8Lo9i_QobZZN4O-aP7Q-MNx9lkcqFUWWK5jUNsV4"/>
+<button class="absolute bottom-4 right-4 bg-white/90 dark:bg-slate-900/90 p-3 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary">add_shopping_cart</span>
+</button>
+</div>
+<div class="space-y-1">
+<h3 class="text-base font-bold text-slate-900 dark:text-slate-100 uppercase tracking-tight">Brazilian Deep Wave Bundles</h3>
+<div class="flex items-center gap-1 mb-1">
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+</div>
+<span class="text-[10px] text-slate-400 font-bold">(86)</span>
+</div>
+<p class="text-primary font-black text-lg">$480.00</p>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-[3/4] mb-4 overflow-hidden rounded-xl bg-slate-100 dark:bg-slate-800">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Sleek black bob wig on mannequin" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAO_c6QmQ60MgxfGNWYmPN9S0spRiffXaipbzN7srVL3BNT7e52-wF2qeqRl5OJ499Yu-tMBZNp-FIIoqMLLSOC8WOcLupy571h6YiP-q0zQ-sfy9AkjoSR2RGGchFscvuqOMfGMc6JsLX7UvOXTqA05EXGHygR_cIQ_HxzkPK6whNjgad4hBVg04mgig3c5hkGih01Ir2PRCj1sLwXv_yigLMy4bYRrqCBeW2dcyu4dVnumfbcQhVTeNQxXItiax7zgbT__lAxWwY"/>
+<button class="absolute bottom-4 right-4 bg-white/90 dark:bg-slate-900/90 p-3 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary">add_shopping_cart</span>
+</button>
+<span class="absolute top-4 left-4 bg-slate-900 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-tighter">Bestseller</span>
+</div>
+<div class="space-y-1">
+<h3 class="text-base font-bold text-slate-900 dark:text-slate-100 uppercase tracking-tight">Classic Sleek Bob HD</h3>
+<div class="flex items-center gap-1 mb-1">
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+</div>
+<span class="text-[10px] text-slate-400 font-bold">(215)</span>
+</div>
+<p class="text-primary font-black text-lg">$890.00</p>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-[3/4] mb-4 overflow-hidden rounded-xl bg-slate-100 dark:bg-slate-800">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Honey blonde highlights extensions" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCM0CTMX8vTpOiybz1atL1FHAWBT3-8MwjrJRlPpX4LVoz_m4vep-5g64yYjiRQvQtkLFYbomafpHvUE39UFzo5Ev2zlnrzyLdYZSYH1og257AVU7DLx5idLmqX0jUx7WFlSSHRm3t2WeUsR4ajSvHzSm5Z3hzrP-98d7dd1k8J60bOpCbjM4xnxijcBFYp-QB60KMAJHKd2B5q1aFU9B2W4jnfoHm8vIAYKG55xl3c8qspjoY5e77dwjhdDJLjMpDsSFAT8Hw_mUQ"/>
+<button class="absolute bottom-4 right-4 bg-white/90 dark:bg-slate-900/90 p-3 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary">add_shopping_cart</span>
+</button>
+</div>
+<div class="space-y-1">
+<h3 class="text-base font-bold text-slate-900 dark:text-slate-100 uppercase tracking-tight">Honey Balayage Tape-Ins</h3>
+<div class="flex items-center gap-1 mb-1">
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+</div>
+<span class="text-[10px] text-slate-400 font-bold">(52)</span>
+</div>
+<p class="text-primary font-black text-lg">$320.00</p>
+</div>
+</div>
+<!-- Product Card 5 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-[3/4] mb-4 overflow-hidden rounded-xl bg-slate-100 dark:bg-slate-800">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Auburn curly wig for luxury look" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWRX5C69v8NyM9VCMvnCWI3RC2pnQOJ7_9CGiyHDh1TWAgLFlUHdqC7aPR9Xn7B2muARg9YEmLgZjqP8KFU2ObpppFVjLMsOVG7UMOuUzdcknZeq2KvnjCBDFfwL8iREXruSGDBQdgd6S7ECrBhnAmOlpbRnJqkrIdA7_HDUOZNwd8xgCjJP1KsYZjqAakz0PGT1J9hxIvXYMeFLac1FtIfPeVntGJXYsKNcDqKkn0aAk0gwyzPoys-3pXn0yGMhOLfnS2YGAGmpQ"/>
+<button class="absolute bottom-4 right-4 bg-white/90 dark:bg-slate-900/90 p-3 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary">add_shopping_cart</span>
+</button>
+</div>
+<div class="space-y-1">
+<h3 class="text-base font-bold text-slate-900 dark:text-slate-100 uppercase tracking-tight">Couture Auburn Curls</h3>
+<div class="flex items-center gap-1 mb-1">
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+</div>
+<span class="text-[10px] text-slate-400 font-bold">(94)</span>
+</div>
+<p class="text-primary font-black text-lg">$1,450.00</p>
+</div>
+</div>
+<!-- Product Card 6 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-[3/4] mb-4 overflow-hidden rounded-xl bg-slate-100 dark:bg-slate-800">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Seamless natural black clip-in extensions" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCu7u6f-HTd2YOpNAJ3lN4WgmcGPTaBh6n-UhxkEBPuug5OyNwGERFKqY9sm10w4E5mpbtCGyepg9HWQ3N-aXG-mYZI-CNhryBaISqACqCpla_X0t2lI-mFQM7-mH5qh2Ov0avslP4nqW0nBi-MBC5U7oUZO5o4lC1nStbkTn7vP8AO-t-6tkCMxtpelmauzGX6nTO1q0LtY5Z6rCdq0920Lmvktk6SMtmv7WOIMiEyrszTju_HNqwrhgIVQgrXe8Zjg81G4pjFMmc"/>
+<button class="absolute bottom-4 right-4 bg-white/90 dark:bg-slate-900/90 p-3 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary">add_shopping_cart</span>
+</button>
+</div>
+<div class="space-y-1">
+<h3 class="text-base font-bold text-slate-900 dark:text-slate-100 uppercase tracking-tight">Seamless Clip-In Luxe</h3>
+<div class="flex items-center gap-1 mb-1">
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+</div>
+<span class="text-[10px] text-slate-400 font-bold">(118)</span>
+</div>
+<p class="text-primary font-black text-lg">$275.00</p>
+</div>
+</div>
+<!-- Product Card 7 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-[3/4] mb-4 overflow-hidden rounded-xl bg-slate-100 dark:bg-slate-800">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Platinum blonde lace front wig" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMl829EadrNYPpLx3YnkSSV2ecLzL4Cu9cORtQpZOK-7hTDy5j5yNpA1kXZCkY7pwX0ukaCH6BaOX1h7qWnjYhi-w9Of4ocHFGZrc53MjyPzGy0PWAxnLMJq-yqcxhUDGcsYuLe347TayTNL1BLjK1JXZxuBxD9wlP5JRJfrxBJipqeQgNn0ekfUGUcKmPu_zpcEnpENgJyIl-BbpVpjVApz8oLMl7CCt6SA_gGhNBhi2azgCzhjAAMspV6lCRHMBb9p7yocQ3iyI"/>
+<button class="absolute bottom-4 right-4 bg-white/90 dark:bg-slate-900/90 p-3 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary">add_shopping_cart</span>
+</button>
+<span class="absolute top-4 left-4 bg-red-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-tighter">Limited Edition</span>
+</div>
+<div class="space-y-1">
+<h3 class="text-base font-bold text-slate-900 dark:text-slate-100 uppercase tracking-tight">Platinum Ice HD Frontal</h3>
+<div class="flex items-center gap-1 mb-1">
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+</div>
+<span class="text-[10px] text-slate-400 font-bold">(39)</span>
+</div>
+<p class="text-primary font-black text-lg">$1,680.00</p>
+</div>
+</div>
+<!-- Product Card 8 -->
+<div class="group cursor-pointer">
+<div class="relative aspect-[3/4] mb-4 overflow-hidden rounded-xl bg-slate-100 dark:bg-slate-800">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Curly synthetic everyday wig" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZCd6FtkfuymBWhM83QkqtRGi3JPWisCVhCLvbq4zeBURRQWLg7rPXnDFIqKGkieo4gS2RF5Bk0tQqHC_styWZvfmty1uwbTFEdS0XZ88BCdIKst8Irb_ihyYEqBevauannbZz4dO-7r4qTUHBZKo5X73pYMRTNFjet4M2CsOYXTgstW0AsbWdvv2BiYWskwnKY2chzM2pPstRoU5Xlh3-6ISASggGsTqr95efIPy2lqANUhFVMtnoUffSic5ZjbVCidbc0jOLfhU"/>
+<button class="absolute bottom-4 right-4 bg-white/90 dark:bg-slate-900/90 p-3 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary">add_shopping_cart</span>
+</button>
+</div>
+<div class="space-y-1">
+<h3 class="text-base font-bold text-slate-900 dark:text-slate-100 uppercase tracking-tight">Everyday Glam Synthetic</h3>
+<div class="flex items-center gap-1 mb-1">
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm fill-1">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+</div>
+<span class="text-[10px] text-slate-400 font-bold">(342)</span>
+</div>
+<p class="text-primary font-black text-lg">$185.00</p>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-20 flex flex-col items-center gap-8">
+<button class="px-12 py-4 bg-primary text-background-dark font-black uppercase tracking-widest rounded-full hover:bg-primary/90 hover:scale-105 transition-all shadow-xl">
+                Load More Products
+            </button>
+<div class="flex items-center gap-4 text-sm font-bold text-slate-500">
+<button class="p-2 hover:text-primary transition-colors"><span class="material-symbols-outlined">chevron_left</span></button>
+<span class="text-primary">1</span>
+<button class="hover:text-primary transition-colors">2</button>
+<button class="hover:text-primary transition-colors">3</button>
+<span>...</span>
+<button class="hover:text-primary transition-colors">12</button>
+<button class="p-2 hover:text-primary transition-colors"><span class="material-symbols-outlined">chevron_right</span></button>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-background-dark text-white py-16 border-t border-primary/20">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="space-y-6">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl">flare</span>
+<h2 class="text-xl font-extrabold tracking-tighter">LUXE HAIR</h2>
+</div>
+<p class="text-slate-400 text-sm leading-relaxed">Defining elegance through premium hair solutions. Join our community of luxury hair enthusiasts.</p>
+</div>
+<div>
+<h3 class="text-primary font-bold uppercase tracking-widest text-sm mb-6">Shop</h3>
+<ul class="space-y-4 text-sm text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="#">New Arrivals</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Wigs</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Extensions</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Bundles</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-primary font-bold uppercase tracking-widest text-sm mb-6">Support</h3>
+<ul class="space-y-4 text-sm text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="#">Shipping Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Returns</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">FAQ</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contact Us</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-primary font-bold uppercase tracking-widest text-sm mb-6">Newsletter</h3>
+<p class="text-slate-400 text-sm mb-4">Get exclusive offers and styling tips.</p>
+<div class="flex overflow-hidden rounded-lg bg-white/5 border border-white/10">
+<input class="bg-transparent border-none focus:ring-0 text-sm flex-grow p-3" placeholder="Your email" type="email"/>
+<button class="bg-primary text-background-dark px-4 font-bold text-xs uppercase">Join</button>
+</div>
+</div>
+</div>
+<div class="mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500 uppercase tracking-widest font-bold">
+<p>© 2024 LUXE HAIR CRAFTSMANSHIP. ALL RIGHTS RESERVED.</p>
+<div class="flex gap-8">
+<a class="hover:text-primary transition-colors" href="#">Instagram</a>
+<a class="hover:text-primary transition-colors" href="#">Pinterest</a>
+<a class="hover:text-primary transition-colors" href="#">TikTok</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
