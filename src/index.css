@@ -1,8 +1,7 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* Optional: custom styles */
+/* index.css - global styles */
 body {
   font-family: 'Manrope', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
 }
